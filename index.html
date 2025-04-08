@@ -11,13 +11,14 @@
 
     <header>
         <a class="skip" href="#main">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="umich">
+        <!-- <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="umich"> -->
+        <img src="images/um_logo_white.png" alt="UM Logo" class="umich">
         <nav>
             <ul>
                 <li><a href = "index.html" class="active">Home</a></li>
                 <li><a href = "food_pantry.html">Food Pantry</a></li>
                 <li><a href = "first_gen.html">First Generation</a></li>
-                <li><a href = "caps.html">CAPS</a></li>
+                <li><a href = "caps.html">Caps</a></li>
             </ul>
         </nav>
         <h1>Student Success Portal</h1>
@@ -35,25 +36,28 @@
             </ol>
         </section>
 
+        <!-- <div class="images"> -->
         <section>
             <h2>CAPS</h2>
             <p>Keeping your mental health is essential for success. The University of Michigan offers numerous resources to help you stay healthy. Schedule an appointment for a CAPS appointment today! Explore the massage chairs at Pierpont and the Union, attend mental health events, and connect with classmates who prioritize their mental health. University Health Service (UHS): Access comprehensive medical care, including routine check-ups, vaccinations, and specialist referrals.</p>
             <p>Join a sports team and enjoy hobbies ranging from football to tennis to dance! Participate in various fitness programs, sports clubs, and use of gym facilities to stay active and healthy.</p>
-            <article>
-                <h3>University Health Service (UHS)</h3>
-                <figure>
-                    <img src="images/UHS.jpg" alt="University Health Services building" class="images">
-                    <figcaption>University Health Services Building</figcaption>
-                </figure>
-            </article>
+            <div class="images">
+                <article>
+                    <figure class="image_one">
+                        <h3>University Health Service (UHS)</h3>
+                        <img src="images/UHS.jpg" alt="University Health Services building">
+                        <figcaption>University Health Services Building</figcaption>
+                    </figure>
+                </article>
 
-            <article>
-                <h3>Recreational Sports</h3>
-                <figure>
-                    <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag." class="images">
-                    <figcaption>UMSI out in the fall!</figcaption>
-                </figure>
-            </article>
+                <article>
+                    <figure class="image_two">
+                        <h3>Recreational Sports</h3>
+                        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
+                        <figcaption>UMSI out in the fall!</figcaption>
+                    </figure>
+                </article>
+            </div>
         </section>
 
         <section>
@@ -69,6 +73,34 @@
     </main>
     <footer>
         <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+        <div>
+            <p>Hours of Operation: Sunday: 2pm-6pm </p>
+            <p>Monday - Thursday: 3pm-7pm </p>
+            <p>Friday: 12pm-7pm </p> 
+            <p>Saturday: closed</p>
+        </div>
+        <p>Phone Number: (734) 763-2285  Email: umsi.academicsuccess@umich.edu </p>
+        <p>Location: 105 S State St. Ann Arbor, MI 48109-1285</p>
+        <!-- copyright statement retreived and updated from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/ -->
+        <p>© Copyrights <span id="year"></span> by Farzana Chowdhury. All rights reserved.</p>
         </footer>
+        <button onclick="topFunction()" id="top" title="Go to top">Scroll to Top</button>
 </body>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
+    let mybutton = document.getElementById("top");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 </html>

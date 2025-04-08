@@ -8,19 +8,21 @@
     <title>CAPS</title>
 </head>
 <body>
+    <a class="skip" href="#main">Skip to Main Content</a>
     <header>
         <figure>
-            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="umich">
+            <!-- <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="umich"> -->
+            <img src="images/um_logo_white.png" alt="UM Logo" class="umich">
             <!-- <img src="images/UM_LOGO.png" alt="University of Michigan" width="1400" height="200"> -->
             <!--The above image: UM LOGO.png was retrieved from https://brand.umich.edu/logos/logo-downloads/ on January 26, 2025.-->
         </figure>
-        <a class="skip" href="#main">Skip to Main Content</a>
+        <!-- <a class="skip" href="#main">Skip to Main Content</a> -->
             <nav>
                 <ul>
                     <li><a href = "index.html">Home</a></li>
                     <li><a href = "food_pantry.html">Food Pantry</a></li>
                     <li><a href = "first_gen.html">First Generation</a></li>
-                    <li><a href = "caps.html" class="active">CAPS</a></li>
+                    <li><a href = "caps.html" class="active">Caps</a></li>
                 </ul>
             </nav>
     <h1>CAPS at UMSI</h1>
@@ -33,10 +35,10 @@
         </section>
 
         <div class="live">
-            <p><a href="https://caps.umich.edu/article/scheduling-appointment">Click here to make an appointment</a></p>
-
             <h2>Need Urgent Help?</h2>
-            <p>Our CAPS team want to be there in your time of need. Let us help you! <a href="https://caps.umich.edu/article/urgent-support">Click here for Urgent Support</a></p>
+            <p><a href="https://caps.umich.edu/article/scheduling-appointment">Make an appointment</a></p>
+            <p>Our CAPS team want to be there in your time of need. Let us help you!</p> 
+            <p><a href="https://caps.umich.edu/article/urgent-support">Urgent Support</a></p>
         </div>
 
         <div class="live">
@@ -54,7 +56,8 @@
         <div class="live">
             <h2>Why Mental Health Matters</h2>
             <p>Taking care of your mental health is just as important as taking care of your physical health. It's okay to pause, seek help, and prioritize your well-being. Whether you're feeling overwhelmed, stressed, or just need someone to talk to, remember you're not alone. Taking small steps to care for your mind can make a big difference. You deserve to feel supported, balanced, and healthy—because your mental health matters every day.</p>
-            <img src="images/Bethechange.JPG" alt="Be the change you want to see">
+            <figure><img src="images/Bethechange.JPG" alt="Be the change you want to see"></figure>
+            <figcaption>Image of map with text: Be the change you wish to see in the world" in black color.</figcaption>
             <!-- width="500" height="400"width="500" height="400" -->
             <!--The above image: UM LOGO.png was retrieved from https://brand.umich.edu/logos/logo-downloads/ on January 26, 2025.-->
         </div>
@@ -71,6 +74,35 @@
     </main>
     <footer>
         <p>Counseling and Psychological Services | <a href="https://caps.umich.edu/">CAPS</a></p>
+        <div> 
+            <p>Hours of Operation: Monday - Thursday: 8am - 6pm</p>     
+            <p>Friday: 8am - 5pm</p>      
+            <p>Saturday & Sunday: Closed</p>
+        </div>
+        <p> Phone Number: (734) 764-8312 Email: caps-uofm@umich.edu </p>
+        <p>Location:
+            Michigan Union, Suite 4079
+            530 South State Street
+            Ann Arbor, MI 48109</p>
+        <!-- copyright statement retreived and updated from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/ -->
+        <p>© Copyrights <span id="year"></span> by Farzana Chowdhury. All rights reserved.</p>
+        <button onclick="topFunction()" id="top" title="Go to top">Scroll to Top</button>
         </footer>
 </body>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    let mybutton = document.getElementById("top");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 </html>

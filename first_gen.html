@@ -10,7 +10,8 @@
 <body>
     <header>
         <figure>
-            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="umich">
+            <!-- <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo" class="umich"> -->
+            <img src="images/um_logo_white.png" alt="UM Logo" class="umich">
             <!-- <img src="images/UM LOGO.png" alt="University of Michigan" width="1400" height="200"> -->
             <!--The above image: UM LOGO.png was retrieved from https://brand.umich.edu/logos/logo-downloads/ on January 26, 2025.-->
         </figure>
@@ -20,7 +21,7 @@
             <li><a href = "index.html">Home</a></li>
             <li><a href = "food_pantry.html">Food Pantry</a></li>
             <li><a href = "first_gen.html" class="active">First Generation</a></li>
-            <li><a href = "caps.html">CAPS</a></li>
+            <li><a href = "caps.html">Caps</a></li>
         </ul>
     </nav>
 
@@ -31,7 +32,10 @@
     <div>
         <h2>About Us</h2>
         <p>We are a welcoming community of First Generation Students who are empowered to be successful and support our peers to be successful. We believe that with teamwork and guidance on the resources UM has to provide, we can all achieve our dreams.</p>
-        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="UMSI student"  width="500" height="400">
+        <figure>
+            <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="UMSI student"  width="500" height="400" class="firstgen">
+            <figcaption>Image of Student in UMSI backpack walking in Ann Arbor, MI </figcaption>
+        </figure>
     </div>
 
     <div>
@@ -49,7 +53,10 @@
             <li><strong>Where:</strong>Michigan League Ballroom (2nd Floor)</li>
         </ul>
         <p>Come as you are, bring your appetite, and let's celebrate the journey of being first together!</p>
-        <img src="images/Burton_Tower.JPG" alt="Burton Tower" width="500" height="400">
+        <figure>
+            <img src="images/Burton_Tower.JPG" alt="Burton Tower" width="500" height="400" class="firstgen">
+            <figcaption>Image of Burton Tower in Ann Arbor, MI </figcaption>
+        </figure>
         <!--The above image: UM LOGO.png was retrieved from https://brand.umich.edu/logos/logo-downloads/ on January 26, 2025.-->
     </div>
 
@@ -67,6 +74,31 @@
 
         <footer>
         <p>First Generation | <a href="https://firstgen.umich.edu/">First Generation </a></p>
+        <div>
+            <p>Hours of Operation: Monday-Friday, 8:00 AM - 5:00 PM</p>
+        </div>
+        <p>Phone Number: 734-764-1100   Email: firstgeninfo@umich.edu</p>
+        <p>Location: 3009 Student Activities Building
+            515 E. Jefferson, Ann Arbor, MI</p>
+        <!-- copyright statement retreived and updated from https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/ -->
+        <p>© Copyrights <span id="year"></span> by Farzana Chowdhury. All rights reserved.</p>
+        <button onclick="topFunction()" id="top" title="Go to top">Scroll to Top</button>
         </footer>
 </body>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    let mybutton = document.getElementById("top");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 </html>
